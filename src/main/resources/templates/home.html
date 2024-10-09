@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers EcoSystem</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+
+<style>.image-scroller-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+header{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.image-scroller {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-scroller img {
+    flex: 0 0 auto;
+    width: 20%;
+}
+
+.scroll-left, .scroll-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.scroll-left {
+    left: 0;
+}
+
+.scroll-right {
+    right: 0;
+}
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.image-scroller img {
+    animation: scroll 15s linear infinite;
+}
+.nav-bar li{
+    padding:10px 20px;
+}
+.welcome-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 10%
+}
+
+.welcome-text {
+    color: red;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 30px;
+    animation: scrollText 5s linear infinite;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}</style>
+<header>
+
+    <a><img src="../static/kmitra.png" alt="logo" width="150" height="80"/></a>
+
+
+    <nav class="nav-bar" style="display:flex;justify-content: center;padding: 10px 20px;">
+        <ul>
+
+
+            <li><a href="#booking">Farmers MarketPlace</a></li>
+            <li><a href="#government-schemes">Government Schemes</a></li>
+            <li><a href="#Animal-husbandry">Animal Husbandry</a></li>
+            <li><a href="#contact-info">Contact Us</a></li>
+            <li><a href="#social-links">Social Media</a></li>
+            <li><a href="#Sign-out">Sign out</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+<div class="welcome-container">
+
+    <h1 class="welcome-text">Welcome!</h1>
+</div>
+
+<section class="buttons-section">
+    <h2 style="color:red">Select a Field:</h2>
+    <div class="buttons-container">
+        <ul class="spaced-list">
+            <form action="/home/CropBooking" >
+                <li><button class="crop-button">Sell Crops</button></li>
+            </form>
+
+            <!-- Add more buttons if needed -->
+            <form action="/home/MilkMarket" >
+                <li><button class="milk-button">Sell Dairy Products</button></li>
+            </form>
+
+
+        </ul>
+
+    </div>
+</section>
+<hr>
+
+
+<div class="image-scroller-container">
+    <div class="image-scroller">
+        <img src="../static/image1.jpg" alt="Image 1">
+        <img src="../static/image2.jpg" alt="Image 2">
+        <img src="../static/image3.jpeg" alt="Image 3">
+        <img src="../static/image4.jpg" alt="Image 4">
+        <img src="../static/image5.jpg" alt="Image 5"><!-- -->
+        <img src="../static/image6.jpg" alt="Image 6">
+
+    </div>
+    <button class="scroll-left">&lt;</button>
+    <button class="scroll-right">&gt;</button>
+</div>
+
+
+
+<hr>
+<section id="government-schemes">
+    <h2>Government Schemes</h2>
+    <p>Learn about various government schemes for farmers.</p>
+    <ul>
+        <li>Agricultural Subsidy Scheme</li>
+        <li>Crop Insurance Scheme</li>
+        <li>Soil Health Card Scheme</li>
+        <li> <a href="/home/AgricultureSchemes">Know More About Various Schemes</a>
+    </ul>
+</section>
+<style>footer{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+}</style>
+<hr><!-- comment -->
+<div id="Animal-husbandry" ><form style="width:40%; margin: 0 auto;"  action="/home/AnimalHusbandry" >
+    <button class="animal-husbandry" >Know About Animal Husbandry</button>
+</form>
+</div>
+
+<hr>
+<footer>
+    <div class="footer-container">
+        <div id="contact-info" class="contact-info">
+            <h3>Contact Us</h3>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +91 1800 180 1551</p>
+            <p>Address: 123 Main , City, Country</p>
+        </div>
+        <div id="social-links" class="social-links">
+            <h3>Follow Us</h3>
+            <nav>
+                <a style="" href="#"><img width="40px" padding="10px" src="../static/fb.jpg" alt="facebook"></a>
+                <a href="#"><img width="40px" padding="40px" src="../static/jkl.jpg" alt="Twitter"></a>
+                <a href="#"><img width="40px" padding="40px" src="../static/ig.webp" alt="Instagram"></a>
+            </nav>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Example Company. All rights reserved.</p>
+        </div>
+        <div id="Sign-out" style="text-align: center;
+             align-content: center;">
+            <form action="/logout" style="width:10%; margin: 0 auto;">
+                <button class="signout">Sign Out</button>
+            </form>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

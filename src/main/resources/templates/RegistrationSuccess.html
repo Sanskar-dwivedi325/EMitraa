@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Successful!</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .success-message {
+            background-color: #C6F4D6;
+            padding: 20px;
+            border: 1px solid #3E8E41;
+            color: #3E8E41;
+            border-radius: 5px;
+        }
+
+        .login-link {
+            margin-top: 20px;
+        }
+
+        .login-link a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+
+        .login-link a:hover {
+            color: #23527c;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="success-message">
+        <h1>Registration Successful!</h1>
+        <p>Your account has been created successfully.</p>
+    </div>
+    <div class="login-link">
+        <a href="/login">Login Now</a>
+    </div>
+</div>
+
+<!-- Redirect to login page after 5 seconds -->
+<script>
+    setTimeout(function() {
+        window.location.href = "/login";
+    }, 5000);
+</script>
+</body>
+</html>

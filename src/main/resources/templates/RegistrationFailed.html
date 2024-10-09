@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Failed</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .error-message {
+            background-color: #f2dede;
+            padding: 20px;
+            border: 1px solid #ebccd1;
+            color: #a94442;
+            border-radius: 5px;
+        }
+
+        .try-again {
+            margin-top: 20px;
+        }
+
+        .try-again a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+
+        .try-again a:hover {
+            color: #23527c;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="error-message">
+        <h1>Registration Failed</h1>
+        <p>Sorry, the username already exists. Please try with a different username.</p>
+    </div>
+    <div class="try-again">
+        <a href="/register">Try Again</a>
+    </div>
+</div>
+
+<script>
+    setTimeout(function() {
+        window.location.href = "/register";
+    }, 5000);
+</script>
+
+</body>
+</html>

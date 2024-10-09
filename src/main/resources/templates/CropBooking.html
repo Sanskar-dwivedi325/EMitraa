@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Slot Booking</title>
+
+</head>
+<style>body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin-top: 50px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.header{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+#booking-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Apply styles to labels */
+label {
+    display: block; /* Each label on a new line */
+    margin-bottom: 5px; /* Spacing between labels */
+}
+
+/* Apply styles to input fields */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%; /* Take up full width of container */
+    padding: 8px; /* Add some padding for better readability */
+    margin-bottom: 10px; /* Spacing between input fields */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* Apply styles to submit button */
+input[type="submit"] {
+    width: 100%; /* Take up full width of container */
+    padding: 10px; /* Add padding for better appearance */
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* Style input fields with required attribute */
+input:required {
+    border-color: #FF0000; /* Change border color for required fields */
+}
+
+/* Style input fields with placeholder text */
+input::placeholder {
+    color: #999; /* Light gray placeholder text color */
+}
+</style>
+<body>
+
+<div class="header">
+
+<h1>Crop Slot Booking</h1>
+</div>
+<style>
+    /* Apply basic styles to the form */
+
+</style>
+
+<form id="booking-form" action="CropBooking1" method="post">
+    <label for="crop-type">Crop Type:</label>
+    <select id="crop-type" name="croptype">
+        <option value="wheat">Wheat</option>
+        <option value="corn">Corn</option>
+        <option value="rice">Rice</option>
+    </select>
+
+    <label  for="preferred-date">Preferred Date:</label>
+    <input type="date" id="preferred-date" name="preferred-date" required>
+
+    <label for="preferred-time">Preferred Time:</label>
+    <select id="preferred-time" name="preferred-time" required>
+        <option value="08:00">08:00 AM</option>
+        <option value="08:30">08:30 AM</option>
+        <option value="09:30">09:00 AM</option>
+        <option value="09:30">09:30 AM</option>
+        <option value="10:00">10:00 AM</option>
+        <option value="10:30">10:30 am</option>
+        <option value="11:00">11:00 AM</option>
+        <option value="11:30">11:30 AM</option>
+        <option value="12:00">12:00 PM</option>
+        <option value="12:30">12:30 PM</option>
+        <option value="13:00">01:00 PM</option>
+
+        <!-- Add more options with 30-minute intervals as needed -->
+    </select>
+
+    <input type="text" name="name" placeholder="Name*" id="name" required>
+    <input type="number" name="adhaarno" placeholder="Adhaar Number*" id="adhaarNo" required>
+    <input type="text" name="mobilenumber" placeholder="mobileNumber*" id="mobilenumber" required>
+    <input type="submit" value="Book Slot">
+</form>
+
+
+<div style="margin-top: 20px;"></div>
+<div id="message"></div>
+<a href="/logout">Sign out</a>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Dairy Farm</title>
+</head>
+<body>
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #000000d7;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    header h1 {
+        color: white;
+        margin: 0;
+    }
+
+    nav {
+        background-color: #E0E0E0;
+        padding: 0.5rem;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .section-padding {
+        padding: 2rem 0;
+    }
+
+    .product-card {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin: 1rem 0;
+        text-align: center;
+        width: 30%;
+    }
+
+    .product-card img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+        margin: 0 0 0.5rem;
+    }
+
+    .product-card p {
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .button {
+        display: inline-block;
+        background-color: #F5B041;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #E6912C;
+    }
+
+    #about {
+        background-color: #F5F5F5;
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    #about img {
+        width: 50%;
+        border-radius: 5px;
+        margin-top: 2rem;
+    }
+
+    #contact {
+        background-color: #F5F5F5;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    #contact form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact label {
+        margin-bottom: 0.5rem;
+    }
+
+    #contact input,
+    #contact textarea {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    #contact input:focus,
+    #contact textarea:focus {
+        outline: none;
+        box-shadow: 0 0 2px 1px rgba(245, 176, 65, 0.5);
+    }
+
+    footer {
+        background-color: #333;
+        padding: 1rem;
+        text-align: center;
+    }
+    footer-content {
+        background-color: rgb(249, 248, 248)}
+
+    footer p {
+        color: white;
+        margin: 0;
+    }
+</style>
+<header>
+    <h1>Welcome to Our Dairy Farm</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="About.jsp">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+</nav>
+<section id="products" class="section-padding">
+    <h2>Our Fresh Dairy Products</h2>
+    <div class="product-card">
+        <img src="milk1.png" alt="Fresh Milk">
+        <h3>Fresh Milk Rs 60/L</h3>
+        <p>Rich and creamy, our fresh milk is perfect for your morning coffee or cereal.</p>
+        <a href="#" class="button">Buy Now</a>
+    </div>
+    <div class="product-card">
+        <img src="milk4.webp" alt="Cheese">
+        <h3>Cheese Rs 400/kg</h3>
+        <p>Handcrafted by our skilled cheesemakers, our artisan cheese is a must-try.</p>
+        <a href="#" class="button">Buy Now</a>
+    </div>
+    <div class="product-card">
+        <img src="milk2.webp" alt=" Yogurt">
+        <h3> Yogurt Rs 100/kg </h3>
+        <p>Packed with protein, our  yogurt is a healthy and delicious snack.</p>
+        <a href="#" class="button">Buy Now</a>
+    </div>
+    <div class="product-card">
+        <img src="milk3.jpg" alt=" buttermilk">
+        <h3> buttermilk Rs 30/L</h3>
+        <p>Packed with protein, our buttermilk is a healthy and delicious snack.</p>
+        <a href="#" class="button">Buy Now</a>
+    </div>
+    <div class="product-card">
+        <img src="ghee.jpg" alt="ghee">
+        <h3> ghee Rs 800/kg</h3>
+        <p>Packed with protein, our Ghee is a healthy and delicious snack.</p>
+        <a href="#" class="button">Buy Now</a>
+    </div>
+    <div class="product-card">
+        <img src="#" alt="others">
+
+
+        <a href="#" class="button">Buy Now</a>
+    </div>
+</section>
+<section id="about" class="section-padding">
+    <h2>About Our Dairy Farm</h2>
+    <p>We are a family-owned dairy farm located in the heart of the countryside. Our cows are raised with love and care, and we pride ourselves on producing high-quality dairy products that our customers love.</p>
+    <img src="farm.jpg" alt="Our Dairy Farm">
+</section>
+<section id="contact" class="section-padding">
+    <h2>Contact Us</h2>
+    <form action="#" method="post" enctype="text/plain">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+        <input type="submit" value="Send" class="button">
+    </form>
+</section>
+<footer>
+    <div class="footer-content">
+        <p>Thanks to visit this webpage . All rights reserved.</p>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="About.jsp">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

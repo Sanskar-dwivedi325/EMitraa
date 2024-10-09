@@ -1,0 +1,38 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+   
+  <div class="container">
+    <div class="registration-form">
+        <h2>Register</h2>
+       <h4>Every field Should be filled correctly for successful registration</h4>
+       <h4 style="color: red">Mandatory(*)</h4>
+      <form th:action="@{/register}" id="registrationForm" method="post" action="/register" th:object="${user}">
+        <input th:field="*{username}" type="text" name="username" placeholder="username*" id="username" required>
+        <input th:field="*{name}" type="text" name="name" placeholder="Name*" id="name" required>
+         <input th:field="*{adhaarno}" type="number" name="adhaarno" placeholder="Adhaar Number*" id="adhaarNo" required>
+        <input th:field="*{district}" type="text" name="district" placeholder="District" id="district" >
+        <input th:field="*{state}" type="text" name="state" placeholder="state*" id="state" required >
+        <input th:field="*{phoneno}" type="text" name="phone" placeholder="mobileNumber*" id="mobilenumber" required>
+        <input th:field="*{address}" type="text" name="address" placeholder="Address" id="adress" >
+        
+        <input th:field="*{password}" type="password" name="password" placeholder="Password*" id="password" required>
+        <button type="submit">Register</button>
+
+
+      </form>
+      
+      <p>Already have an account? <a href="/login">Login here</a></p>
+      
+      
+    </div>
+  </div>
+    
+</body>
+</html>
