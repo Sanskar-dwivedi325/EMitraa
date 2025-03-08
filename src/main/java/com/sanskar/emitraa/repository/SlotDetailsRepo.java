@@ -1,0 +1,10 @@
+package com.sanskar.emitraa.repository;
+
+import com.sanskar.emitraa.model.SlotDetails;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface SlotDetailsRepo extends JpaRepository<SlotDetails, Integer> {
+
+}

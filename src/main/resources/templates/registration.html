@@ -33,6 +33,14 @@
       
     </div>
   </div>
-    
+  <script>
+    // Check if there is a message and display it in an alert box
+    window.onload = function () {
+      var message = "[[${message}]]"; // Thymeleaf inserts message here
+      if (message && message !=="null") {
+        alert(message);
+      }
+    };
+  </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Crop Slot Booking</title>
 
@@ -58,30 +58,30 @@ input[type="text"],
 input[type="number"],
 input[type="date"],
 select {
-    width: 100%; /* Take up full width of container */
-    padding: 8px; /* Add some padding for better readability */
-    margin-bottom: 10px; /* Spacing between input fields */
-    box-sizing: border-box; /* Include padding and border in the width */
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
-/* Apply styles to submit button */
+
 input[type="submit"] {
-    width: 100%; /* Take up full width of container */
-    padding: 10px; /* Add padding for better appearance */
-    background-color: #4CAF50; /* Green background color */
-    color: white; /* White text color */
-    border: none; /* Remove border */
-    cursor: pointer; /* Show pointer cursor on hover */
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-/* Style input fields with required attribute */
+
 input:required {
-    border-color: #FF0000; /* Change border color for required fields */
+    border-color: #FF0000;
 }
 
-/* Style input fields with placeholder text */
+
 input::placeholder {
-    color: #999; /* Light gray placeholder text color */
+    color: #999;
 }
 </style>
 <body>
@@ -90,24 +90,22 @@ input::placeholder {
 
 <h1>Crop Slot Booking</h1>
 </div>
-<style>
-    /* Apply basic styles to the form */
 
-</style>
 
-<form id="booking-form" action="CropBooking1" method="post">
+
+<form id="booking-form" th:action="@{/home/CropBooking/BookSlot}" method="post">
     <label for="crop-type">Crop Type:</label>
-    <select id="crop-type" name="croptype">
+    <select id="crop-type" name="cropType">
         <option value="wheat">Wheat</option>
         <option value="corn">Corn</option>
         <option value="rice">Rice</option>
     </select>
 
     <label  for="preferred-date">Preferred Date:</label>
-    <input type="date" id="preferred-date" name="preferred-date" required>
+    <input type="date" id="preferred-date" name="date" required>
 
     <label for="preferred-time">Preferred Time:</label>
-    <select id="preferred-time" name="preferred-time" required>
+    <select id="preferred-time" name="time" required>
         <option value="08:00">08:00 AM</option>
         <option value="08:30">08:30 AM</option>
         <option value="09:30">09:00 AM</option>
@@ -124,8 +122,8 @@ input::placeholder {
     </select>
 
     <input type="text" name="name" placeholder="Name*" id="name" required>
-    <input type="number" name="adhaarno" placeholder="Adhaar Number*" id="adhaarNo" required>
-    <input type="text" name="mobilenumber" placeholder="mobileNumber*" id="mobilenumber" required>
+    <input type="number" name="adhaar" placeholder="Adhaar Number*" id="adhaarNo" required>
+    <input type="text" name="mobile" placeholder="mobileNumber*" id="mobilenumber" required>
     <input type="submit" value="Book Slot">
 </form>
 
@@ -134,5 +132,14 @@ input::placeholder {
 <div id="message"></div>
 <a href="/logout">Sign out</a>
 
+<script>
+    // Check if there is a message and display it in an alert box
+    window.onload = function () {
+        var message = "[[${message}]]"; // Thymeleaf inserts message here
+        if (message && message !=="null") {
+            alert(message);
+        }
+    };
+</script>
 </body>
 </html>
