@@ -35,7 +35,8 @@ public class CustumUserService implements UserDetailsService {
 
                     @Override
                     public String getPassword() {
-                        return user.getPassword();
+                        return
+                                user.getPassword();
                     }
 
                     @Override

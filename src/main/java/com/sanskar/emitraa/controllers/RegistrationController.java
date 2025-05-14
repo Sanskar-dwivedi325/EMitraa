@@ -43,7 +43,7 @@ public class RegistrationController {
            return "redirect:/register";
         }
 
-       redirectAttributes.addFlashAttribute("message", "Registration Failed");
+       redirectAttributes.addFlashAttribute("message", "Already registered");
         return "redirect:/register";
     }
 
